@@ -5,15 +5,23 @@
 // Eseguiamo questo esercizio prima con forEach e poi con filter.
 
 const myArray = ['Michele', 'Fabio', 'Roberto', 'Giovanni', 'Simone', 'Chiara'];
+// console.log(myArray);
 
 const min = 3;
 const max = 5;
+newArray=[];
 
-// myArray.forEach((element, index, array) => {
-//     console.log( index[3]);
-// });
-
-const numeriRichiesti = myArray.filter((element, index, array) => {
-    return index > min && index < max ;
+myArray.forEach((element, index, array) => {
+// cerco tra gli indici
+    if( index > min && index < max ){
+//  attanzione!!!!ritorno del valore booleano ma non del valore interno 
+// pusho l'elemento 
+newArray.push(element);
+};
 });
-console.log(numeriRichiesti);
+console.log(newArray);
+
+// const numeriRichiesti = myArray.filter((element, index, array) => {
+//     return index > min && index < max ;
+// });
+// console.log(numeriRichiesti);
